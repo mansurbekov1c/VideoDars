@@ -59,3 +59,25 @@
 
 // let age = +prompt("How old are you?");
 // console.log(`I'm ${age} years old`);
+
+// Vazifa
+
+let numberOfSeries = +prompt("Nechta serial ko'rdingiz?");
+
+const seriesDB = {
+  count: numberOfSeries,
+  series: {},
+  actors: {},
+  genres: [],
+  private: false,
+};
+
+let a = prompt("Oxirgi ko'rgan serialingiz?");
+let b = +prompt("Nechi baxo berasiz?");
+let c = prompt("Oxirgi ko'rgan serialingiz?");
+let d = +prompt("Nechi baxo berasiz?");
+
+seriesDB.series[a] = b;
+seriesDB.series[c] = d;
+
+console.log(seriesDB);
