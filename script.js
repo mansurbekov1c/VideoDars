@@ -62,22 +62,99 @@
 
 // Vazifa
 
-let numberOfSeries = +prompt("Nechta serial ko'rdingiz?");
+// let numberOfSeries = +prompt("Nechta serial ko'rdingiz?");
 
-const seriesDB = {
-  count: numberOfSeries,
-  series: {},
-  actors: {},
-  genres: [],
-  private: false,
-};
+// const seriesDB = {
+//   count: numberOfSeries,
+//   series: {},
+//   actors: {},
+//   genres: [],
+//   private: false,
+// };
 
-let a = prompt("Oxirgi ko'rgan serialingiz?");
-let b = +prompt("Nechi baxo berasiz?");
-let c = prompt("Oxirgi ko'rgan serialingiz?");
-let d = +prompt("Nechi baxo berasiz?");
+// let a = prompt("Oxirgi ko'rgan serialingiz?");
+// let b = +prompt("Nechi baxo berasiz?");
+// let c = prompt("Oxirgi ko'rgan serialingiz?");
+// let d = +prompt("Nechi baxo berasiz?");
 
-seriesDB.series[a] = b;
-seriesDB.series[c] = d;
+// seriesDB.series[a] = b;
+// seriesDB.series[c] = d;
 
-console.log(seriesDB);
+// console.log(seriesDB);
+
+// 7-dars
+// Shartli operator
+
+// let trafficLight = "red";
+
+// if (trafficLight == "red") {
+//   console.log("Stop");
+// } else if (trafficLight == "yellow") {
+//   console.log("Prepare");
+// } else {
+//   console.log("Goo");
+// }
+
+// let age = +prompt("How old are you?");
+// if (age <= 18) {
+//   console.log("No access");
+// } else {
+//   console.log("Access");
+// }
+
+// = - qiymat beradi
+// == - qiymatni tekshiradi
+// === - qiymat ni va turini tekshiradi
+
+// let trafficLight = "";
+
+// switch (trafficLight) {
+//   case "green":
+//     console.log("Goo");
+//     break;
+//   case "yellow":
+//     console.log("Prepare");
+//     break;
+//   case "red":
+//     console.log("Stop");
+//     break;
+//   default:
+//     console.log("O'zing amallab o't");
+// }
+
+//Sikl
+
+// While
+// Do While
+// For
+
+// let i = 1;
+
+// while (i <= 5) {
+//   console.log(i);
+//   i++;
+// }
+
+// let i = 1;
+
+// do {
+//   console.log(i);
+//   i++;
+// } while (i <= 5);
+
+// let i = 1;
+
+// //  qiymat; shart; amal
+// for (i; i <= 5; i++) {
+//   if (i === 2) {
+//     continue;
+//   }
+//   console.log(i);
+// }
+
+// Ternarniy operator
+
+let age = +prompt("How old are you?");
+
+//              if                           else
+age < 18 ? console.log("No access") : console.log("Access");
