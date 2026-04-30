@@ -154,7 +154,41 @@
 
 // Ternarniy operator
 
-let age = +prompt("How old are you?");
+// let age = +prompt("How old are you?");
 
-//              if                           else
-age < 18 ? console.log("No access") : console.log("Access");
+// //              if                           else
+// age < 18 ? console.log("No access") : console.log("Access");
+
+// 8-dars
+// Vazifa
+
+// let numberOfSeries = +prompt("Nechta serial ko'rdingiz?");
+
+// const seriesDB = {
+//   count: numberOfSeries,
+//   series: {},
+//   actors: {},
+//   genres: [],
+//   private: false,
+// };
+
+// for (let i = 0; i < 2; i++) {
+//   let a = prompt(`Oxirgi ko'rgan serialingiz ${i}?`);
+//   let b = prompt(`Nechi baxo berasiz ${i}?`);
+
+//   if (a !== null && b !== null && a !== "" && b !== "") {
+//     seriesDB.series[a] = b;
+//   } else {
+//     i--;
+//   }
+// }
+
+// if (seriesDB.count < 5) {
+//   console.log("Kam serial ko'ribsiz");
+// } else if (seriesDB.count >= 5 && seriesDB < 10) {
+//   console.log("Siz classic tomoshabin ekansiz");
+// } else if (seriesDB.count > 10) {
+//   console.log("G'irt bekorchi ekansiz");
+// }
+
+// console.log(seriesDB);
