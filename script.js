@@ -192,3 +192,83 @@
 // }
 
 // console.log(seriesDB);
+
+//
+// 9-dars. Function turlari
+//
+
+// Function decloration
+//
+
+// let age = 12;
+
+// function showHelloToUser(name) {
+//   age = 18; //local o'zgaruvchi
+//   console.log(`Hello ${name}, He is ${age} years old`);
+// }
+
+// showHelloToUser("Shox");
+
+// const calcAdd20 = calculate(1, 8);
+// console.log(calcAdd20 + 20);
+// function calculate(a, b) {
+//   return a + b;
+// }
+
+// Function expression
+//
+
+// let showHelloWorld = function (text) {
+//   console.log(text);
+// };
+
+// showHelloWorld("Hello World");
+
+// Arrow function
+//
+
+// let calculate = (a, b) => {
+//   return a + b;
+// };
+
+// console.log(calculate(2, 3));
+
+//
+// String methods
+//
+
+// console.dir(Math) barcha metodlarni ko'rsatadi
+
+let text = "Hello World";
+let password = "        qwerty    ";
+
+console.log(text);
+
+// Length is property
+console.log("Uzunligi", text.length);
+
+// Methods
+console.log("#1. Aniq positsiyadagi indexdagi harf:", text.charAt(2));
+console.log("#2. Aniq positsiyadagi indexdagi harf:", text[2]);
+console.log("Harflarni katta registerda qilish:", text.toUpperCase());
+console.log("Harflarni kichik registerda qilish:", text.toLowerCase());
+console.log("#1. Matnni bosh va oxiridan kesish:", text.slice(1, -2));
+console.log("#2. Matnni bosh va oxiridan kesish:", text.substring(0, 2));
+console.log("Ikki tarafdan space olib tashlash:", password.trim());
+console.log("Boshidan space olib tashlash:", password.trimStart());
+console.log("Oxiridan space olib tashlash:", password.trimEnd());
+
+// Number Methods
+
+let number = 12.6;
+let width = "242.62px";
+
+console.log(number);
+
+console.log("Matematik tahlillaydi:", Math.round(number));
+console.log("Verguldan keyingi raqamni olib tashlaydi:", Math.floor(number));
+
+console.log(width);
+
+console.log("String malumot turidan sonni qaytaradi:", parseFloat(width));
+console.log("String malumot turidan butun sonni qaytaradi:", parseInt(width));
