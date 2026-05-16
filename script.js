@@ -239,36 +239,107 @@
 
 // console.dir(Math) barcha metodlarni ko'rsatadi
 
-let text = "Hello World";
-let password = "        qwerty    ";
+// let text = "Hello World";
+// let password = "        qwerty    ";
 
-console.log(text);
+// console.log(text);
 
-// Length is property
-console.log("Uzunligi", text.length);
+// // Length is property
+// console.log("Uzunligi", text.length);
 
-// Methods
-console.log("#1. Aniq positsiyadagi indexdagi harf:", text.charAt(2));
-console.log("#2. Aniq positsiyadagi indexdagi harf:", text[2]);
-console.log("Harflarni katta registerda qilish:", text.toUpperCase());
-console.log("Harflarni kichik registerda qilish:", text.toLowerCase());
-console.log("#1. Matnni bosh va oxiridan kesish:", text.slice(1, -2));
-console.log("#2. Matnni bosh va oxiridan kesish:", text.substring(0, 2));
-console.log("Ikki tarafdan space olib tashlash:", password.trim());
-console.log("Boshidan space olib tashlash:", password.trimStart());
-console.log("Oxiridan space olib tashlash:", password.trimEnd());
+// // Methods
+// console.log("#1. Aniq positsiyadagi indexdagi harf:", text.charAt(2));
+// console.log("#2. Aniq positsiyadagi indexdagi harf:", text[2]);
+// console.log("Harflarni katta registerda qilish:", text.toUpperCase());
+// console.log("Harflarni kichik registerda qilish:", text.toLowerCase());
+// console.log("#1. Matnni bosh va oxiridan kesish:", text.slice(1, -2));
+// console.log("#2. Matnni bosh va oxiridan kesish:", text.substring(0, 2));
+// console.log("Ikki tarafdan space olib tashlash:", password.trim());
+// console.log("Boshidan space olib tashlash:", password.trimStart());
+// console.log("Oxiridan space olib tashlash:", password.trimEnd());
 
-// Number Methods
+// // Number Methods
 
-let number = 12.6;
-let width = "242.62px";
+// let number = 12.6;
+// let width = "242.62px";
 
-console.log(number);
+// console.log(number);
 
-console.log("Matematik tahlillaydi:", Math.round(number));
-console.log("Verguldan keyingi raqamni olib tashlaydi:", Math.floor(number));
+// console.log("Matematik tahlillaydi:", Math.round(number));
+// console.log("Verguldan keyingi raqamni olib tashlaydi:", Math.floor(number));
 
-console.log(width);
+// console.log(width);
 
-console.log("String malumot turidan sonni qaytaradi:", parseFloat(width));
-console.log("String malumot turidan butun sonni qaytaradi:", parseInt(width));
+// console.log("String malumot turidan sonni qaytaradi:", parseFloat(width));
+// console.log("String malumot turidan butun sonni qaytaradi:", parseInt(width));
+
+//
+// 11-dars
+//
+// Homework
+
+let numberOfSeries;
+
+startApp();
+
+const seriesDB = {
+  count: numberOfSeries,
+  series: {},
+  actors: {},
+  genres: [],
+  private: false,
+};
+
+setFavouriteSeries();
+detectingLevel();
+(writeGenres(), showDb(seriesDB.private));
+
+function startApp() {
+  numberOfSeries = +prompt("Nechta serial ko'rdingiz?");
+
+  while (
+    numberOfSeries == "" ||
+    numberOfSeries == null ||
+    isNaN(numberOfSeries)
+  ) {
+    numberOfSeries = +prompt("Nechta serial ko'rdingiz?");
+  }
+}
+
+function setFavouriteSeries() {
+  for (let i = 0; i < 2; i++) {
+    const a = prompt(`Oxirgi ko'rgan serialingiz ${i + 1}`);
+    const b = prompt(`Nechi baxo berasiz? ${i + 1}`);
+
+    if (a !== null && b !== null && a !== "" && b !== "") {
+      seriesDB.series[a] = b;
+    } else {
+      i--;
+    }
+  }
+}
+
+function detectingLevel() {
+  if (seriesDB.count < 5) {
+    console.log("Kam serial ko'ribsiz");
+  } else if (seriesDB.count >= 5 && seriesDB.count < 10) {
+    console.log("Siz classic tomoshabin ekansiz");
+  } else if (seriesDB.count >= 10) {
+    console.log("Siz g'irt bekorchi ekansiz");
+  }
+}
+
+function writeGenres() {
+  for (let i = 0; i < 3; i++) {
+    const genre = prompt(`Yaxshi ko'rgan janringiz ${i + 1}?`);
+    seriesDB.genres[i] = genre;
+  }
+}
+
+function showDb(isPrivate) {
+  if (!isPrivate) {
+    console.log(seriesDB);
+  } else {
+    console.log("Ma'lumotlar mahfiy saqlanmoqda");
+  }
+}
